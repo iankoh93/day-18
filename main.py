@@ -1,39 +1,11 @@
-# Its possible to import EVERYTHING from a module via the *, this is kinda bad practice
-# E.G. from turtle import *
+###This code will not work in repl.it as there is no access to the colorgram package here.###
+##We talk about this in the video tutorials##
 
-# You can give a module an alias using "as" which is a little like re-naming it
-# E.G.
-# from turtle as t
-# tim = t.Turtle()
+import colorgram
 
-from turtle import Turtle, Screen
-import random as r
+rgb_colors = []
+colors = colorgram.extract('image.jpg', 30)
+for color in colors:
+    rgb_colors.append(color.rgb)
 
-tim = Turtle()
-tim.shape("turtle")
-tim.shapesize(2)
-tim.color("purple")
-tim.pensize(3)
-
-# tim.penup()
-# tim.left(90)
-# tim.forward(500)
-# tim.left(90)
-# tim.forward(100)
-# tim.right(180)
-# tim.pendown()
-#
-# for i in range(3, 30):
-#     for _ in range(1, i+1):
-#         tim.forward(100)
-#         tim.right(360/i)
-
-
-
-
-
-
-
-
-screen = Screen()
-screen.exitonclick()
+print(rgb_colors)
